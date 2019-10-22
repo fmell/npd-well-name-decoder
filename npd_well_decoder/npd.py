@@ -24,12 +24,6 @@ def parse_wellbore_name(txt):
             well_number = int(well_number)
         if well_type:
             well_type = well_type[1:]
-        return {
-            "quadrant": quadrant,
-            "block": block,
-            "wellbore_id": wellbore_id,
-            "well_number": well_number,
-            "well_type": well_type,
-        }
+        return f"{quadrant}/{block}-{well_number}"
     else:
         return None
